@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .logout-link {
+            float: right;
+            font-size: 16px;
+            margin-top: -10px;
+        }
+        .details-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        form {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Details</h1>
+        <a href="Index.html" class="logout-link">Log Out</a>
+
+        
+        <div class="details-section">
+            <h2>Deposit Amount</h2>
+            <form action="BankingOperations" method="post">
+                <div>
+                    <label for="account-no">Account Number:</label>
+                    <input type="text" id="account-no" name="accountNumber" placeholder="Enter your account number" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <label for="DepositAmount">Deposit Amount:</label>
+                    <input type="text" id="DepositAmount" name="amount" placeholder="Enter Amount" required>
+                </div>
+                <button type="submit">Deposit</button>
+            </form>
+        </div>
+
+        <div class="details-section">
+            <h2>Withdraw Amount</h2>
+            <form action="BankingOperations" method="post">
+                <div>
+                    <label for="account-no-withdraw">Account Number:</label>
+                    <input type="text" id="account-no-withdraw" name="accountNumber" placeholder="Enter your account number" required>
+                </div>
+                <div>
+                    <label for="password-withdraw">Password:</label>
+                    <input type="password" id="password-withdraw" name="password" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <label for="WithdrawAmount">Withdraw Amount:</label>
+                    <input type="text" id="WithdrawAmount" name="withdrawAmount" placeholder="Enter Amount" required>
+                </div>
+                <button type="submit">Withdraw</button>
+            </form>
+        </div>
+        <div class="details-section">
+            <h2>Transaction History</h2>
+            <table id="transaction-table">
+                <!-- Transaction history table content goes here -->
+            </table>
+            <a href="TransactionHistoryServlet?download=true">Download Transaction History</a>
+            <button onclick="refreshPage()">Refresh</button>
+        </div>
+        
+    </div>
+</body>
+</html>

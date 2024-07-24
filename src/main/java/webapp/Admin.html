@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Operations - Admin Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 30px;
+        }
+        .container a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background: #007bff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        .container a:hover {
+            background: #0056b3;
+        }
+        a.logout {
+            text-decoration: none;
+            color: white;
+            background: #dc3545;
+            padding: 15px 30px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        a.logout:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>ADMIN DASHBOARD</h1>
+    <div class="container">
+        <div><a href="Registration.html">Register New Account</a></div>
+        <div><a href="Modify.html">Modify Account</a></div>
+        <div><a href="Delete.html">Delete Account</a></div>
+        <div><a href="Display.html">Display Account</a></div>
+    </div>
+    <a href="Index.html" class="logout">Log Out</a>
+</body>
+</html>
